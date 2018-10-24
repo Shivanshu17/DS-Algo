@@ -20,7 +20,7 @@ for i in range(t):
     for j in range(len(w)):
         s = s + (w[j] - w[0])
     print(s)
-
+s
 
 
 
