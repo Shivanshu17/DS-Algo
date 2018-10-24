@@ -21,10 +21,10 @@ while t>0:
                     Check[Dict.index(z)] = 1
         
         
-    for p in Check:
-        if p == 0:
-            p = "NO"
+    for p in len(Check):
+        if Check[p] == 0:
+            Check[p] = "NO"
         else:
-            p = "YES"
+            Check[p] = "YES"
     print(*Check)
     
