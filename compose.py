@@ -6,27 +6,27 @@ while t>0:
     N = int(input())
     M = int(input())
     pm, pn = 0,0
-    for i in range(2,int(M/2)):
+    for i in range(2,M):
         if M%i == 0:
             pm =1
             break
-    for i in range(2, int(N/2)):
+    for i in range(2, N):
         if N%i == 0:
             pn = 1
             break
     count = 0
     if pm == 1 and pn == 1:
         while N!=M:
-            N = divisee(N, M)
+            for i in range(2, N):
+                if N%i == 0:
+                    t = N/i
+                    if N+t<=M:
+                        N = N+t
+            
             count +=1
     print(count)    
 
-def divisee(a,b):
 
-    for i in range(2, a):
-        if a%i == 0:
-            t = a/i
-            if a+t<=b:
-                a = a+t
-            
-    return(a)
+
+    
+
