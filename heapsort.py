@@ -20,7 +20,6 @@ def printMax():
 t = list(input().split(' '))
 for i in t:
     h.insert(i)
-    
-heapify()
+#heapify()
 printMax()
     

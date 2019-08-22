@@ -9,7 +9,7 @@ class heap:
             return(self.arr.index(x))
     
     def less(self, x, y, z):
-        if(x<y or x<z):
+        if(x<=y or x<=z):
             return True
         return False
         
@@ -22,7 +22,7 @@ class heap:
     def sink(self, k):
         j = self.arr.index(k)
         n = len(self.arr)
-        while(j<n//2 and self.less(self.arr[j],self.arr[2*j],self.arr[2*j+1])):
+        while(j<(n-1)//2 and self.less(self.arr[j],self.arr[2*j],self.arr[2*j+1])):
             t = self.greater(self.arr[2*j], self.arr[2*j+1])
             self.arr[j], self.arr[t] = self.arr[t], self.arr[j]
             j = t
